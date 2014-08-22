@@ -5,6 +5,6 @@ void setup()
 void draw()
 {
 	ellipse(50,50,50,50);
-	rectangle(43,32);
+	rectangle(34,34,43,32);
 }
 
