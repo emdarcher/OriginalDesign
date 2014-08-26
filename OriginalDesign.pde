@@ -12,7 +12,7 @@
 void setup()
 {
 	char aCharVal;
-	init_size();
+//	init_size();
 char bitmap_thing[8] = {
 0b01111110,
 0b01000010,
