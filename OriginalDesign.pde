@@ -1,3 +1,18 @@
+char bitmap_thing[] = {
+(byte)0b01111110,
+(byte)0b01000010,
+(byte)0b01111110,
+(byte)0b01000010,
+(byte)0b01000010,
+(byte)0b01000010,
+(byte)0b00000000,
+(byte)0b00000000,
+};
+
+void setup()
+{
+	char aCharVal;
+//	init_size();
 /*char bitmap_thing[8] = {
 0b01111110,
 0b01000010,
@@ -8,21 +23,6 @@
 0b00000000,
 0b00000000,
 };*/
-
-void setup()
-{
-	char aCharVal;
-//	init_size();
-char bitmap_thing[8] = {
-0b01111110,
-0b01000010,
-0b01111110,
-0b01000010,
-0b01000010,
-0b01000010,
-0b00000000,
-0b00000000,
-};
 
 }
 void draw()
