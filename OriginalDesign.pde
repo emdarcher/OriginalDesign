@@ -27,10 +27,10 @@ char bitmap_thing[8] = {
 }
 void draw()
 {
-	fill(32,12,41);
-	ellipse(50,50,50,50);
-	fill(234,233,123);
-	rect(34,34,43,32);
+	//fill(32,12,41);
+	//ellipse(50,50,50,50);
+	//fill(234,233,123);
+	//rect(34,34,43,32);
 	
 	display_byte_bitmap(bitmap_thing,8,0,0);
 
