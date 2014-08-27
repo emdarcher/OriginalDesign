@@ -13,26 +13,6 @@ void setup()
 {
         char aCharVal;
 //      init_size();
-/*char bitmap_thing[8] = {
-0b01111110,
-0b01000010,
-0b01111110,
-0b01000010,
-0b01000010,
-0b01000010,
-0b00000000,
-0b00000000,
-};*/
-/*char bitmap_thing[] = {
-0x7E,//(byte)0b01111110,
-0x42,//(byte)0b01000010,
-0x7E,//(byte)0b01111110,
-0x42,//(byte)0b01000010,
-0x42,//(byte)0b01000010,
-0x42,//(byte)0b01000010,
-0x00,//(byte)0b00000000,
-0x00,//(byte)0b00000000,
-};*/
 
 }
 void draw()
@@ -41,7 +21,7 @@ void draw()
         //ellipse(50,50,50,50);
         //fill(234,233,123);
         //rect(34,34,43,32);
-init_size();
+	init_size();
         display_byte_bitmap(bitmap_thing,8,0,0);
 
 }
@@ -49,7 +29,6 @@ void display_byte_bitmap( byte inBMP[], int bmp_charlen, int x_begin, int y_begi
                                 //RGB
         color pixel_color_black = ((0x00<<16)|(0x00<<8)|(0x00<<0));
         color pixel_color_white = ((0xFF<<16)|(0xFF<<8)|(0xFF<<0));
-        //do {
           
                 for(int y_cor=y_begin;y_cor<((bmp_charlen));y_cor++){
                         for(int x_cor=x_begin;x_cor<8;x_cor++){
@@ -62,8 +41,6 @@ void display_byte_bitmap( byte inBMP[], int bmp_charlen, int x_begin, int y_begi
                                 }
                         }
                 }
-        //}
-        //} while(--bmp_charlen > 0);
 }
 
 void init_size(){
