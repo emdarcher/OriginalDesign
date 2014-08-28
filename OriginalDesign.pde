@@ -22,7 +22,7 @@ void draw()
         //fill(234,233,123);
         //rect(34,34,43,32);
 	init_size();
-        display_byte_bitmap(bitmap_thing,8,0,0);
+        display_byte_bitmap_rectPixels(bitmap_thing,8,0,0);
 
 }
 void display_byte_bitmap( byte inBMP[], int bmp_charlen, int x_begin, int y_begin ){
@@ -37,6 +37,27 @@ void display_byte_bitmap( byte inBMP[], int bmp_charlen, int x_begin, int y_begi
                                         //set(x_cor,y_cor,#FFF967);
                                 } else {
                                         set(x_cor,y_cor,pixel_color_white);
+                                        // set(x_cor,y_cor,#01fffd);
+                                }
+                        }
+                }
+}
+void display_byte_bitmap_rectPixels( byte inBMP[], int bmp_charlen, int x_begin, int y_begin ){
+                                //RGB
+        color pixel_color_black = ((0x00<<16)|(0x00<<8)|(0x00<<0));
+        color pixel_color_white = ((0xFF<<16)|(0xFF<<8)|(0xFF<<0));
+          
+                for(int y_cor=y_begin;y_cor<((bmp_charlen));y_cor++){
+                        for(int x_cor=x_begin;x_cor<8;x_cor++){
+                                if(((byte)(inBMP[y_cor]) & ((1<<7) >> x_cor))>0){
+                                        fill(0);
+                                        rect((x_cor<<3),(y_cor<<3),(1<<3),(1<<3));  
+                                        //set(x_cor,y_cor,pixel_color_black);
+                                        //set(x_cor,y_cor,#FFF967);
+                                } else {
+                                        fill(255);
+                                        rect((x_cor<<3),(y_cor<<3),(1<<3),(1<<3));
+                                        //set(x_cor,y_cor,pixel_color_white);
                                         // set(x_cor,y_cor,#01fffd);
                                 }
                         }
